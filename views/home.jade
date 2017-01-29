@@ -1,0 +1,57 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='website')
+        meta(name='author', content='Drew Prescott')
+        title Team Manager
+        link(rel="stylesheet", href="http://www.w3schools.com/lib/w3.css")
+    body#page-top
+        .w3-top
+            ul.w3-navbar#navbar
+                li.w3-hide-medium.w3-hide-large.w3-opennav.w3-right
+                    a(href='javascript:void(0);' onclick='myFunction()') ☰
+                li
+                    a(href='/home') Logo/Team Manager
+                li.w3-right.w3-hide-small.w3-dropdown-hover
+                    a(href='#') #{userFirstName} #{userLastName}
+                    .w3-dropdown-content.w3-card-4(style='right:0')
+                        a(href='#') Edit Profile
+                        a(href='#') Account Settings
+                        a(href='/logout') Log Out
+                li.w3-right.w3-hide-small
+                    a(href='#') Teams
+                li.w3-right.w3-hide-small
+                    a(href='/schedule') Calendar
+                li.w3-right.w3-hide-small
+                    a(href='/planning') Planning
+            .w3-hide.w3-hide-large.w3-hide-medium#collapse
+                ul.w3-navbar.w3-light-grey.w3-left-align
+                    li.w3-dropdown-hover
+                        a(href='#') Username
+                        .w3-dropdown-content
+                            a(href='#') Edit Profile
+                            a(href='#') Account Settings
+                            a(href='/logout') Log Out
+                    li
+                        a(href='#') Teams
+                    li
+                        a(href='/schedule') Calendar
+                    li
+                        a(href='/planning') Planning
+        block content
+        script(type='text/javascript').
+            function myFunction() {
+                var x = document.getElementById("collapse");
+                var y = document.getElementById("navbar");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                    y.className = y.className.replace(" w3-top", "");
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                    y.className += " w3-top";
+                }
+            }
+            console

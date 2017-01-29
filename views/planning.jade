@@ -1,0 +1,27 @@
+extends home
+
+block content
+    br
+    br
+    .w3-container
+        button.w3-btn(onclick='location.href="/event/create"', type='button') Create New Event
+    .w3-container
+        input#eventsFilterInput.w3-input.w3-border.w3-padding(type='text', placeholder='Search for events...', onkeyup='filterEventsList()')
+        ul#eventsList.w3-ul.w3-border.w3-margin-top.w3-hoverable
+            li
+                a(href='#', style='display:block;text-decoration:none') Event Title
+    script(type='text/javascript').
+        function filterEventsList() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("eventsFilterInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("eventsList");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }

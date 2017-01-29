@@ -1,0 +1,62 @@
+extends ../layout
+
+block content
+    .w3-container
+        .w3-card-4
+            .w3-container.w3-blue
+                h2 Add Event
+            form.w3-container(action='/event/add', method='post')
+                p
+                    input#eventTitle.w3-input(type='text', placeholder='Event title', name='eventTitle', list='eventTitles', autocomplete='off' required)
+                    datalist#eventTitles
+                        option(value='Title 1')
+                        option(value='Title 2')
+                    label.w3-label.w3-validate(for='eventTitle') Title
+                .w3-row-padding
+                    .w3-quarter
+                        p
+                            input#startDateTime.w3-input(type='datetime-local', name='startDateTime', required)
+                            label.w3-label.w3-validate(for='startDateTime') Start Time
+                    .w3-quarter
+                        p
+                            input#endDateTime.w3-input(type='datetime-local', name='endDateTime', required)
+                            label.w3-label.w3-validate(for='endDateTime') End Time
+                    .w3-half
+                        p
+                            input#allDay.w3-check(type='checkbox', name='allDay')
+                            label.w3-label.w3-validate(for='allDay') All Day
+                        p
+                            input#repeat.w3-check(type='checkbox', name='repeat', onclick='document.getElementById("repeatModal").style.display="block"')
+                            label.w3-label.w3-validate(for='allDay') Repeat
+                .w3-modal#repeatModal
+                    .w3-modal-content.w3-card-8.w3-animate-zoom
+                        .w3-center
+                            span.w3-closebtn.w3-container.w3-padding-8.w3-dipslay-topright(title='Close Modal', onclick='document.getElementById("repeatModal").style.display="none"') &times;
+                            .w3-container
+                                p
+                                    label.w3-label(for='repeatFrequency') Repeats
+                                    select#repeatFrequency.w3-select(name='repeatFrequency')
+                                        option(value='daily', selected) Daily
+                                        option(value='weekly') Weekly
+                                        option(value='monthly') Monthly
+                                        option(value='yearly') Yearly
+                                p
+                                    label.w3-label(for='repeatsPerFrequency') Repeat every
+                                    select#repeatsPerFrequency.w3-select(name='repeatsPerFrequency')
+                                        option(value='1', selected) 1
+                                        option(value='2') 2
+                                        option(value='3') 3
+                                        option(value='4') 4
+                                    span weeks
+                            .w3-container.w3-border-top.w3-padding-16.w3-light-grey
+                                .w3-btn-group.w3-show-inline-block
+                                    button.w3-btn.w3-margin(type='button', onclick='document.getElementById("repeatModal").style.display="none"') Done
+                                    button.w3-btn.w3-red.w3-margin(type='button', onclick='document.getElementById("repeatModal").style.display="none"') Cancel
+                p
+                    input#eventLocation.w3-input(type='text', placeholder='Event location', name='eventLocation')
+                    label.w3-label(for='eventLocation') Event Location
+                p
+                    textarea#eventDescription.w3-input(rows='5', name='eventDescription')
+                    label.w3-label(for='eventDescription') Description
+                p
+                    button.w3-btn(type='submit') Add

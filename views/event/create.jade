@@ -1,0 +1,55 @@
+extends ../layout
+
+block content
+    .w3-container
+        .w3-card-4
+            .w3-container.w3-blue
+                h2 Create New Event
+            form.w3-container(action='/event/create', method='post')
+                p
+                    input#eventTitle.w3-input(type='text', placeholder='Event title', name='eventTitle', required)
+                    label.w3-label.w3-validate(for='eventTitle') Title
+                p
+                    textarea#eventDescription.w3-input(rows='5', name='eventDescription')
+                    label.w3-label(for='eventDescription') Description
+                p
+                    label.w3-label Event tags
+                    a.w3-btn-floating(onclick="document.getElementById('eventTagModal').style.display='block'") +
+                    #eventTagModal.w3-modal
+                        .w3-modal-content.w3-card-8.w3-animate-zoom(style='max-width:600px')
+                            .w3-center
+                                br
+                                span.w3-closebtn.w3-hover-red.w3-container.w3-padding-8.w3-display-topright(onclick="document.getElementById('eventTagModal').style.display='none'", title='Close') ×
+                            .w3-container
+                                .w3-section
+                                    label
+                                        b Username
+                                    input.w3-input.w3-border.w3-margin-bottom(type='text', placeholder='Enter Username', name='usrname', required='')
+                                    label
+                                        b Password
+                                    input.w3-input.w3-border(type='password', placeholder='Enter Password', name='psw', required='')
+                                    button.w3-btn-block.w3-green.w3-section.w3-padding(type='submit') Add Tag
+                            .w3-container.w3-border-top.w3-padding-16.w3-light-grey
+                                button.w3-btn.w3-red(onclick="document.getElementById('eventTagModal').style.display='none'", type='button') Cancel
+                p
+                    label.w3-label Sub-events
+                        a.w3-btn-floating(onclick="document.getElementById('subEventModal').style.display='block'") +
+                        #subEventModal.w3-modal
+                            .w3-modal-content.w3-card-8.w3-animate-zoom(style='max-width:600px')
+                                .w3-center
+                                    br
+                                    span.w3-closebtn.w3-hover-red.w3-container.w3-padding-8.w3-display-topright(onclick="document.getElementById('subEventModal').style.display='none'", title='Close') ×
+                                .w3-container
+                                    .w3-section
+                                        label
+                                            b Username
+                                        input.w3-input.w3-border.w3-margin-bottom(type='text', placeholder='Enter Username', name='usrname', required='')
+                                        label
+                                            b Password
+                                        input.w3-input.w3-border(type='password', placeholder='Enter Password', name='psw', required='')
+                                        button.w3-btn-block.w3-green.w3-section.w3-padding(type='submit') Add Tag
+                                .w3-container.w3-border-top.w3-padding-16.w3-light-grey
+                                    button.w3-btn.w3-red(onclick="document.getElementById('subEventModal').style.display='none'", type='button') Cancel
+                p
+                    a.w3-btn(href='/planning') Cancel
+                    button.w3-btn(type='submit') Create

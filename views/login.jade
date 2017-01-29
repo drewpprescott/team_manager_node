@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    .w3-container
+        .w3-card-4
+            .w3-container.w3-blue
+                h2 Input Form
+            form.w3-container(action='/login', method='post')
+                p
+                    input#email.w3-input(type='email', placeholder='Email Address', name='email', required)
+                    label.w3-label.w3-validate(for='email') Email
+                p
+                    input#password.w3-input(type='password', placeholder='Password', name='password', required)
+                    label.w3-label.w3-validate(for='password') Password
+                p
+                    button.w3-btn(type='submit') Login

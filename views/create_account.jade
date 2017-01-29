@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    .w3-container
+        .w3-card-4
+            .w3-container.w3-blue
+                h2 Input Form
+            form.w3-container(action='/create-account', method='post')
+                p
+                    input#email.w3-input(type='email', placeholder='Email Address', name='email', required)
+                    label.w3-label.w3-validate(for='email') Email
+                p
+                    input#firstName.w3-input(type='text', placeholder='First Name', name='firstName', required)
+                    label.w3-label.w3-validate(for='firstName') First Name
+                p
+                    input#lastName.w3-input(type='text', placeholder='Last Name', name='lastName', required)
+                    label.w3-label.w3-validate(for='lastName') Last Name
+                p
+                    input#homePhone.w3-input(type='tel', placeholder='Home Phone', name='homePhone', required)
+                    label.w3-label.w3-validate(for='homePhone') Home Phone
+                p
+                    input#mobilePhone.w3-input(type='mobilePhone', placeholder='Mobile Phone', name='mobilePhone', required)
+                    label.w3-label.w3-validate(for='mobilePhone') Mobile Phone
+                p
+                    input#password.w3-input(type='password', placeholder='Password', name='password', required)
+                    label.w3-label.w3-validate(for='password') Password
+                p
+                    button.w3-btn(type='submit') Sign Up

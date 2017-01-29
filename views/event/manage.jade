@@ -1,0 +1,12 @@
+extends ../home
+
+block content
+    br
+    br
+    .w3-container
+        p #{eventTitle}
+        p #{eventDescription}
+        ul.w3-ul.w3-border.w3-margin-top.w3-hoverable
+            - var subEvents = ['Subevent 1', 'Subevent 2'];
+            for subEvent in subEvents
+                li #{subEvent}

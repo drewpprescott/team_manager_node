@@ -1,0 +1,163 @@
+extends home
+
+block content
+    br
+    br
+    .w3-row
+        .w3-col.w3-containter(style='width:200px;')
+            .w3-container
+                a.w3-btn(href='event/create') Create
+                a.w3-btn(href='event/add"') Add
+            .w3-container
+                h6 Team
+                p
+                    input.w3-check(type='checkbox')
+                    label Team Name
+                p
+                    input.w3-check(type='checkbox')
+                    label Team Name
+                p
+                    input.w3-check(type='checkbox')
+                    label Team Name
+            .w3-container
+                .w3-row
+                    .w3-col.s4.w3-center <
+                    .w3-col.s4.w3-center= moment().format('MMMM YYYY')
+                    .w3-col.s4.w3-center >
+                .w3-row
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') S
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') M
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') T
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') W
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') T
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') F
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') S
+                .w3-row
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 1
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 2
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 3
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 4
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 5
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 6
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 7
+                .w3-row
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 1
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 2
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 3
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 4
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 5
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 6
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 7
+                .w3-row
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 1
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 2
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 3
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 4
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 5
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 6
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 7
+                .w3-row
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 1
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 2
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 3
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 4
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 5
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 6
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 7
+                .w3-row
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 1
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 2
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 3
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 4
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 5
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 6
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 7
+                .w3-row
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 1
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 2
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 3
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 4
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 5
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 6
+                    .w3-col.w3-center(style='width:14.2857142857%;height:100%;') 7
+        .w3-rest.w3-container(style='height:90vh;')
+            header.w3-container(style='height:15%')
+                .w3-display-container(style='height:100%')
+                    .w3-display-left
+                        h2= moment().format('MMMM YYYY')
+                    .w3-display-middle
+                        .w3-btn-bar.w3-show-inline-block
+                            button.w3-btn.w3-border <
+                            button.w3-btn.w3-border Today
+                            button.w3-btn.w3-border >
+                    .w3-display-right
+                        .w3-btn-bar.w3-show-inline-block
+                            button.w3-btn.w3-border Day
+                            button.w3-btn.w3-border Week
+                            button.w3-btn.w3-border Month
+                            button.w3-btn.w3-border Year
+            .w3-container(style='height:5%;')
+                .w3-row(style='height:100%')
+                    .w3-col.w3-container(style='width:14.2857142857%;height:100%;') Sun
+                    .w3-col.w3-container(style='width:14.2857142857%;height:100%;') Mon
+                    .w3-col.w3-container(style='width:14.2857142857%;height:100%;') Tue
+                    .w3-col.w3-container(style='width:14.2857142857%;height:100%;') Wed
+                    .w3-col.w3-container(style='width:14.2857142857%;height:100%;') Thu
+                    .w3-col.w3-container(style='width:14.2857142857%;height:100%;') Fri
+                    .w3-col.w3-container(style='width:14.2857142857%;height:100%;') Sat
+            .w3-container(style='height:80%;')
+                .w3-row(style='height:16.666666666%')
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;')= moment()
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                .w3-row(style='height:16.666666666%')
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                .w3-row(style='height:16.666666666%')
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                .w3-row(style='height:16.666666666%')
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                .w3-row(style='height:16.666666666%')
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                .w3-row(style='height:16.666666666%')
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+                    .w3-col.w3-container.w3-border(style='width:14.2857142857%;height:100%;') day
+    script(type='text/javascript').
+        function w3_open() {
+            document.getElementById("mySidenav").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidenav").style.display = "none";
+        }
